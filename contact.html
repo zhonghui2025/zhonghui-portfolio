@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Zhonghui Zhao</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">ZZH</a>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./resume.html">Resume</a>
+      <a class="active" href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p>Email: <a href="mailto:18005369012@163.com">18005369012@163.com</a></p>
+    <p>GitHub: <a href="https://github.com/zhonghui2025" target="_blank">zhonghui2025</a></p>
+    <p>LinkedIn / Google Scholar（如有）也可以加链接。</p>
+
+    <h2>Message</h2>
+    <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+      <label>Your Name
+        <input type="text" name="name" required />
+      </label>
+      <label>Your Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button class="btn" type="submit">Send</button>
+    </form>
+    <p class="muted small">（表单用 <a href="https://formspree.io" target="_blank">Formspree</a> 免费服务，去创建表单后把 <code>your-id</code> 替换成你的表单 ID 即可。）</p>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Zhonghui Zhao
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
