@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Zhonghui Zhao</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">ZZH</a>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+      <a class="active" href="./projects.html">Projects</a>
+      <a href="./resume.html">Resume</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Projects</h1>
+    <p class="muted">Each project includes problem, method, result, and repo/report links—面向博士申请的展示方式。</p>
+
+    <article id="churn" class="project">
+      <h2>Customer Churn Prediction</h2>
+      <p><strong>Problem:</strong> Identify at-risk users for targeted retention.</p>
+      <p><strong>Method:</strong> Feature engineering → stratified CV → XGBoost; model explainability with SHAP.</p>
+      <p><strong>Result:</strong> Recall @ P=0.75 improved by <strong>+18%</strong> vs. logistic baseline; top drivers: tenure, support tickets, plan type.</p>
+      <p class="meta">Python · pandas · scikit-learn · XGBoost · SHAP</p>
+      <div class="links">
+        <a class="btn sm" href="https://github.com/zhonghui2025" target="_blank">Code</a>
+        <a class="btn sm outline" href="#" target="_blank">Report (PDF)</a>
+        <a class="btn sm outline" href="#" target="_blank">Demo / Notebook</a>
+      </div>
+    </article>
+
+    <article id="did" class="project">
+      <h2>Pricing Elasticity via Difference-in-Differences</h2>
+      <p><strong>Problem:</strong> Measure discount impact on sales while controlling for confounders.</p>
+      <p><strong>Method:</strong> DiD with staggered adoption; pre-trend checks; event-study visualization.</p>
+      <p><strong>Result:</strong> Short-term uplift +7.9% (p&lt;0.05); effect fades after week 4.</p>
+      <p class="meta">R · tidyverse · did · ggplot2</p>
+      <div class="links">
+        <a class="btn sm" href="https://github.com/zhonghui2025" target="_blank">Code</a>
+        <a class="btn sm outline" href="#" target="_blank">Report (PDF)</a>
+      </div>
+    </article>
+
+    <article id="ts" class="project">
+      <h2>Hybrid Sales Forecasting</h2>
+      <p><strong>Problem:</strong> Improve weekly demand prediction under promotions & holidays.</p>
+      <p><strong>Method:</strong> ARIMA residuals + LightGBM with calendar features; rolling origin evaluation.</p>
+      <p><strong>Result:</strong> MAPE ↓ 12% vs seasonal naïve; stable under promo spikes.</p>
+      <p class="meta">Python · statsmodels · LightGBM · matplotlib</p>
+      <div class="links">
+        <a class="btn sm" href="https://github.com/zhonghui2025" target="_blank">Code</a>
+        <a class="btn sm outline" href="#" target="_blank">Dashboard</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Zhonghui Zhao
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
