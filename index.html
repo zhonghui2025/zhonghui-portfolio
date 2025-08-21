@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zhonghui Zhao | Data Analytics Portfolio</title>
+  <meta name="description" content="Data analytics projects, research interests, and CV for PhD applications." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">ZZH</a>
+    <nav class="nav">
+      <a class="active" href="./index.html">Home</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./resume.html">Resume</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/0?v=4" alt="Avatar" />
+      <div>
+        <h1>Hi, I’m Zhonghui Zhao</h1>
+        <p class="lead">
+          Aspiring data analyst focusing on <strong>predictive modeling</strong>, <strong>causal inference</strong>, and <strong>business analytics</strong>.
+          I build end-to-end workflows in Python/R and communicate results with clarity.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="./projects.html">View Projects</a>
+          <a class="btn outline" href="./resume.html">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research Interests</h2>
+      <ul class="tags">
+        <li>Machine Learning</li>
+        <li>Causal Inference</li>
+        <li>A/B Testing</li>
+        <li>Time Series</li>
+        <li>NLP for Business Insights</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Highlights</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Customer Churn Prediction</h3>
+          <p>Built a baseline → tuned XGBoost with SHAP to explain drivers; lifted recall @ fixed precision by 18%.</p>
+          <p class="meta">Python · scikit-learn · SHAP</p>
+          <a class="text-link" href="./projects.html#churn">Read more →</a>
+        </article>
+        <article class="card">
+          <h3>Pricing Elasticity via Diff-in-Diff</h3>
+          <p>Estimated causal effect of discounting; robust checks with event-study and placebo tests.</p>
+          <p class="meta">R · tidyverse · did</p>
+          <a class="text-link" href="./projects.html#did">Read more →</a>
+        </article>
+        <article class="card">
+          <h3>Sales Forecasting</h3>
+          <p>Hybrid ARIMA + LightGBM; MAPE ↓ 12% vs. naïve seasonal benchmark.</p>
+          <p class="meta">Python · statsmodels · LightGBM</p>
+          <a class="text-link" href="./projects.html#ts">Read more →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Zhonghui Zhao · <a href="https://github.com/zhonghui2025">GitHub</a>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
